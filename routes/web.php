@@ -23,10 +23,6 @@ Route::get('/google/callback', [SocialAuthController::class, 'handleGoogleCallba
 
 
 
-
-
-
-
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', function () {
