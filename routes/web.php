@@ -8,6 +8,7 @@ use Inertia\Inertia;
 use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/', function () {
+    dd('here');
     return Inertia::render('Auth/Login', [
         'canResetPassword' => Route::has('password.request'),
         'status' => session('status'),
@@ -19,10 +20,6 @@ Route::get('/', function () {
 Route::get('/google/redirect', [SocialAuthController::class, 'redirectToGoogle'])->name('google.login');
 
 Route::get('/google/callback', [SocialAuthController::class, 'handleGoogleCallback'])->name('google.callback');
-
-
-
-
 
 
 
