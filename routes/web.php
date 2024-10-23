@@ -8,6 +8,7 @@ use Inertia\Inertia;
 use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/', function () {
+    dd('here');
     return Inertia::render('Auth/Login', [
         'canResetPassword' => Route::has('password.request'),
         'status' => session('status'),
